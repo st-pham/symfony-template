@@ -12,6 +12,12 @@ Docker, Docker Compose
 ./bin/start.sh
 ```
 
+### Composer
+Par exemple :
+```shell
+./bin/composer.sh --version
+```
+
 ### Arrêter le projet
 ```shell
 ./bin/stop.sh
