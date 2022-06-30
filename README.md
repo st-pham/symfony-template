@@ -11,7 +11,7 @@ Docker, Docker Compose
 ```shell
 ./bin/start.sh
 ```
-
+Le site sera disponible à http://localhost:8000/
 ### Composer
 Par exemple :
 ```shell
