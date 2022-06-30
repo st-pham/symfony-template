@@ -1,0 +1,48 @@
+version: '3.5'
+
+services:
+    nginx:
+        image: symfony-training_nginx
+        build:
+            context: ./nginx
+        container_name: symfony-training_nginx
+        depends_on:
+            - php
+        volumes:
+            - ../public:/app/public
+        ports:
+            - '8000:80'
+        networks:
+            - ubitransport_symfony-training
+
+    php:
+        image: symfony-training_php
+        build:
+            context: ./php
+        container_name: symfony-training_php
+        depends_on:
+            - mysql
+        volumes:
+            - ../:/app
+        networks:
+            - ubitransport_symfony-training
+        working_dir: /app
+
+    mysql:
+        image: symfony-training_mysql
+        build:
+            context: ./mysql
+        container_name: symfony-training_mysql
+        volumes:
+            - ./mysql/data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: symfony-training
+            MYSQL_USER: user
+            MYSQL_PASSWORD: ubitransport
+        networks:
+            - ubitransport_symfony-training
+
+networks:
+    ubitransport_symfony-training:
+        external: false
