@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec -ti symfony-training_php composer $@
+docker exec -ti symfony-lab_php composer $@
