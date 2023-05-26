@@ -9,16 +9,16 @@ Docker, Docker Compose
 
 ### Démarrer le projet
 ```shell
-./bin/start.sh
+./bin/dev/start
 ```
 Le site sera disponible à http://localhost:8000/
 ### Composer
 Par exemple :
 ```shell
-./bin/composer.sh --version
+./bin/dev/composer --version
 ```
 
 ### Arrêter le projet
 ```shell
-./bin/stop.sh
+./bin/dev/stop
 ```
