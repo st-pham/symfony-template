@@ -11,6 +11,11 @@ Docker, Docker Compose
 ```shell
 bin/dev/start
 ```
+
+To rebuild images
+```shell
+bin/dev/start --build
+```
 Le site sera disponible à http://localhost:8000/
 ### Composer
 Par exemple :
