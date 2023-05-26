@@ -1,8 +1,4 @@
-# Template pour la formation sensio
-Symfony 6.0  
-PHP 8.0  
-NGINX  
-MYSQL 5.7
+# Symfony lab
 
 ### Prérequis
 Docker, Docker Compose
